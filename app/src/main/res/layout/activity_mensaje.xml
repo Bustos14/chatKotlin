@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.widget.Toolbar
+        android:id="@+id/toolbarMessaje"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imagenview_perfil"
+            android:layout_width="80dp"
+            android:layout_height="56dp"
+            app:srcCompat="@drawable/imagenview" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="96dp"
+            tools:layout_editor_absoluteY="28dp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </android.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="410dp"
+        android:layout_height="53dp"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcMensajes"
+        app:layout_constraintVertical_bias="0.99">
+
+        <EditText
+            android:id="@+id/etEscritura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/btEnvio"
+            android:background="@android:color/transparent"
+            android:hint="Escribe aqui" />
+
+        <ImageButton
+            android:id="@+id/btEnvio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_send" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcMensajes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMessaje" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
